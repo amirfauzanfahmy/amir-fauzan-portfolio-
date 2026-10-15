@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HalalChain — Problem to Technology Story</title>
+<style>
+:root{--g:#0f6b4d;--ink:#142019;--cream:#f7f4ec;--muted:#6b786f;--gold:#bd9554}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:#101914;color:white}
+main{max-width:1180px;margin:auto;padding:24px}.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:14px}
+h1{font-size:clamp(28px,5vw,54px);letter-spacing:-.04em;margin:0}.small{color:#9eb2a7}.controls{display:flex;gap:8px;flex-wrap:wrap}
+button{border:1px solid #385045;background:#16271f;color:#fff;border-radius:999px;min-height:44px;padding:0 16px;font-weight:850;cursor:pointer}button.primary{background:#167957}
+.frame{position:relative;min-height:620px;border-radius:28px;overflow:hidden;background:linear-gradient(135deg,#14231c,#0f1713);border:1px solid #304239}
+.scene{position:absolute;inset:0;padding:56px;display:grid;align-content:center;opacity:0;transform:translateY(15px);transition:.65s ease;pointer-events:none}.scene.active{opacity:1;transform:none}
+.kicker{font-size:13px;font-weight:900;letter-spacing:.18em;text-transform:uppercase;color:#67d7ad}.title{font-size:clamp(42px,8vw,92px);font-weight:950;letter-spacing:-.055em;line-height:.93;margin:10px 0 18px;max-width:950px}.copy{font-size:clamp(18px,2.2vw,27px);max-width:850px;color:#c1d0c8}
+.visuals{display:flex;gap:18px;flex-wrap:wrap;margin-top:32px}.tile{min-width:150px;min-height:130px;border-radius:24px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);display:grid;place-items:center;text-align:center;padding:16px;font-size:48px}.tile span{font-size:13px;color:#c7d5ce;font-weight:800;display:block;margin-top:6px}
+.thread{height:5px;border-radius:99px;background:linear-gradient(90deg,transparent,#47d9a4,transparent);box-shadow:0 0 30px rgba(71,217,164,.5);margin-top:35px}
+.timeline{display:flex;gap:5px;margin-top:12px}.seg{height:6px;flex:1;background:#31443a;border-radius:99px}.seg.on{background:#43c996}
+.time{margin-top:8px;color:#8fa197;font-family:ui-monospace,monospace}.note{margin-top:12px;color:#91a49a;font-size:13px}
+@media(max-width:700px){.scene{padding:28px}.frame{min-height:650px}.tile{min-width:120px;flex:1}.title{font-size:46px}}
+</style></head>
+<body><main>
+<div class="top">
+ <div><h1>Problem → Solution → Technology</h1><div class="small">75-second browser story · ready to screen-record as a video</div></div>
+ <div class="controls"><button class="primary" id="play">▶ Play</button><button id="pause">⏸ Pause</button><button id="restart">↺ Restart</button></div>
+</div>
+<div class="frame" id="frame">
+ <section class="scene active"><div class="kicker">HalalChain</div><div class="title">YOU TRUST THE LABEL.</div><div class="copy">But behind every halal meat product is a much longer supply-chain journey.</div><div class="visuals"><div class="tile">🥩<span>HALAL PRODUCT</span></div><div class="tile">🏷️<span>VISIBLE LABEL</span></div></div></section>
+ <section class="scene"><div class="kicker">The Problem</div><div class="title">CAN YOU SEE THE JOURNEY?</div><div class="copy">A single batch can move through exporters, logistics providers, checkpoints, warehouses and retailers.</div><div class="visuals"><div class="tile">🏭<span>EXPORTER</span></div><div class="tile">🚚<span>LOGISTICS</span></div><div class="tile">⚓<span>CHECKPOINT</span></div><div class="tile">🏪<span>RETAIL</span></div></div></section>
+ <section class="scene"><div class="kicker">The Gap</div><div class="title">DIFFERENT ORGANISATIONS. DIFFERENT RECORDS.</div><div class="copy">Fragmented records make the full batch history harder to reconstruct and investigate.</div><div class="visuals"><div class="tile">📄<span>DOCUMENT</span></div><div class="tile">🗂️<span>DATABASE</span></div><div class="tile">📧<span>SEPARATE SYSTEM</span></div></div></section>
+ <section class="scene"><div class="kicker">The Solution</div><div class="title">ONE BATCH. ONE TRACEABLE STORY.</div><div class="copy">HalalChain connects the physical batch with digital evidence across key supply-chain events.</div><div class="thread"></div></section>
+ <section class="scene"><div class="kicker">Chosen Technology 1</div><div class="title">RFID CONNECTS PHYSICAL TO DIGITAL.</div><div class="copy">The shipment receives an RFID identity so scans can associate physical movement with the correct batch.</div><div class="visuals"><div class="tile">📦<span>PHYSICAL BATCH</span></div><div class="tile">📡<span>RFID</span></div><div class="tile">🪪<span>DIGITAL IDENTITY</span></div></div></section>
+ <section class="scene"><div class="kicker">Chosen Technology 2</div><div class="title">IOT ADDS CONTEXT.</div><div class="copy">Temperature and humidity sensors provide supporting environmental evidence during transportation.</div><div class="visuals"><div class="tile">🌡️<span>TEMPERATURE</span></div><div class="tile">💧<span>HUMIDITY</span></div><div class="tile">⚠️<span>ALERT</span></div></div></section>
+ <section class="scene"><div class="kicker">Chosen Technology 3</div><div class="title">BLOCKCHAIN PROTECTS SELECTED EVIDENCE.</div><div class="copy">Important state changes can be anchored to a tamper-evident shared ledger. It is an integrity layer — not a replacement for databases or halal certification.</div><div class="visuals"><div class="tile">🗂️<span>OPERATIONAL DATA</span></div><div class="tile">⛓️<span>INTEGRITY LAYER</span></div></div></section>
+ <section class="scene"><div class="kicker">Chosen Technology 4</div><div class="title">QR MAKES IT SIMPLE FOR THE CONSUMER.</div><div class="copy">The consumer does not need blockchain knowledge. They scan and explore the relevant batch journey.</div><div class="visuals"><div class="tile">🥩<span>PRODUCT</span></div><div class="tile">📱<span>SCAN QR</span></div><div class="tile">🧭<span>TRACE JOURNEY</span></div></div></section>
+ <section class="scene"><div class="kicker">Research Honesty</div><div class="title">BLOCKCHAIN DOES NOT DECIDE WHAT IS HALAL.</div><div class="copy">Certification and physical inspection remain with authorised bodies and trusted processes. HalalChain strengthens the digital traceability trail around them.</div></section>
+ <section class="scene"><div class="kicker">HalalChain · TRL 3</div><div class="title">SEE THE JOURNEY BEHIND HALAL.</div><div class="copy">Trace it. Verify it. Trust it.<br><br>From halal claim to traceable evidence.</div><div class="thread"></div></section>
+</div>
+<div class="timeline" id="timeline"></div><div class="time" id="time">Scene 1 / 10</div>
+<div class="note">Suggested use: run this page full-screen, press Play, and record the browser with OBS / Xbox Game Bar / PowerPoint screen recording. You can later add your narration and music.</div>
+</main>
+<script>
+const scenes=[...document.querySelectorAll(".scene")], tl=document.getElementById("timeline");
+scenes.forEach(()=>{const s=document.createElement("div");s.className="seg";tl.appendChild(s)});
+let i=0,t=null;
+const durations=[6000,7000,6500,6500,7000,7000,8000,7000,8500,7000];
+function show(n){i=Math.max(0,Math.min(n,scenes.length-1));scenes.forEach((s,k)=>s.classList.toggle("active",k===i));[...tl.children].forEach((s,k)=>s.classList.toggle("on",k<=i));document.getElementById("time").textContent=`Scene ${i+1} / ${scenes.length}`;}
+function stop(){if(t){clearTimeout(t);t=null}}
+function schedule(){stop();t=setTimeout(()=>{if(i<scenes.length-1){show(i+1);schedule()}else stop()},durations[i])}
+function play(){schedule()}
+document.getElementById("play").addEventListener("click",play);
+document.getElementById("pause").addEventListener("click",stop);
+document.getElementById("restart").addEventListener("click",()=>{stop();show(0);play()});
+show(0);
+</script>
+</body></html>
